@@ -5,7 +5,8 @@
   "author": "Dash Core Group, Inc.",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
     "test": "mocha",
     "build": "webpack --display-error-details",
     "coverage": "nyc mocha",
@@ -29,6 +30,9 @@
   },
   "devDependencies": {
     "chai": "~4.2.0",
+    "eslint": "^5.12.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
     "mocha": "^5.2.0",
     "nyc": "^13.1.0",
     "uglify-js-es6": "^2.8.9",
