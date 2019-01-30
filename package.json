@@ -7,7 +7,7 @@
   "scripts": {
     "lint": "eslint",
     "test": "mocha",
-    "build": "gulp",
+    "build": "webpack --display-error-details",
     "coverage": "nyc mocha",
     "check-package": "npm run check-package:name && npm run check-package:version",
     "check-package:name": "test $(jq -r .name package.json) = $(jq -r .name package-lock.json)",
