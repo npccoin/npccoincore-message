@@ -1,29 +1,25 @@
-# Dash Message Verification and Signing for Bitcore-Dash
+# dashcore-message
 
+[![Build Status](https://img.shields.io/travis/dashevo/dashcore-message.svg?branch=master&style=flat-square)](https://travis-ci.org/dashevo/dashcore-message)
+[![NPM Package](https://img.shields.io/npm/v/@dashevo/dashcore-message.svg?style=flat-square)](https://www.npmjs.org/package/@dashevo/dashcore-message)
 
-[![NPM Package](https://img.shields.io/npm/v/bitcore-message-dash.svg?style=flat-square)](https://www.npmjs.org/package/bitcore-message-dash)
-[![Build Status](https://img.shields.io/travis/dashpay/bitcore-message-dash.svg?branch=master&style=flat-square)](https://travis-ci.org/dashpay/bitcore-message-dash)
-[![Coverage Status](https://img.shields.io/coveralls/bitpay/bitcore-message-dash.svg?style=flat-square)](https://coveralls.io/r/dashpay/bitcore-message-dash?branch=master)
+> Message Verification and Signing for dashcore-lib
 
-bitcore-message-dash adds support for verifying and signing dash messages in [Node.js](http://nodejs.org/) and web browsers.
+dashcore-message adds support for verifying and signing dash messages in [Node.js](http://nodejs.org/) and web browsers.
 
-See [the main bitcore-dash repo](https://github.com/dashpay/bitcore-dash) for more information.
+See [the main dashcore-lib repo](https://github.com/dashevo/dashcore-lib) for more information.
 
-## Getting Started
-
-```sh
-npm install bitcore-message-dash
-```
+## Install
 
 ```sh
-bower install bitcore-message-dash
+npm install @dashevo/dashcore-message
 ```
 
 To sign a message:
 
 ```javascript
-var bitcore = require('bitcore-lib-dash');
-var Message = require('bitcore-message-dash');
+var bitcore = require('@dashevo/dashcore-lib');
+var Message = require('@dashevo/dashcore-message');
 
 var privateKey = bitcore.PrivateKey.fromWIF('cPBn5A4ikZvBTQ8D7NnvHZYCAxzDZ5Z2TSGW2LkyPiLxqYaJPBW4');
 var signature = Message('hello, world').sign(privateKey);
@@ -39,11 +35,10 @@ var verified = Message('hello, world').verify(address, signature);
 
 ## Contributing
 
-See [CONTRIBUTING.md](https://github.com/dashpay/bitcore-dash/blob/master/CONTRIBUTING.md) on the main bitcore-dash repo for information about how to contribute.
+Feel free to dive in! [Open an issue](https://github.com/dashevo/dashcore-message/issues/new) or submit PRs.
+
+Please see [CONTRIBUTING.md](https://github.com/dashpay/dash/blob/master/CONTRIBUTING.md) on the DashCore repo for information about how to contribute.
 
 ## License
 
-Code released under [the MIT license](https://github.com/bitpay/bitcore/blob/master/LICENSE).
-
-Copyright 2013-2015 BitPay, Inc. Bitcore is a trademark maintained by BitPay, Inc.
-
+Code released under [the MIT license](LICENSE).
