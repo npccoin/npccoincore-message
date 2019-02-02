@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+  <title>Tester - DashCore Message</title>
+  <script language="javascript" src="dist/dashcore-message.js"></script>
+  <script language="javascript" src="dist/dashcore-lib.js"></script>
+</head>
+<body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var privateKey = dashcore.PrivateKey.fromWIF('cPBn5A4ikZvBTQ8D7NnvHZYCAxzDZ5Z2TSGW2LkyPiLxqYaJPBW4');
+      console.log("privateKey: " + privateKey);
+      console.log("typeof privateKey: " + typeof privateKey);
+
+      var signature = dashcoreMessage('hello, world').sign(privateKey);
+      console.log("signature: " + signature);
+    });
+  </script>
+</body>
+</html>
