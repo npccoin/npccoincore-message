@@ -13,7 +13,7 @@ const rawConfig = Object.assign({}, commonJSConfig, {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'dashcore-message.js',
-    library: 'dashcore-message',
+    library: 'dashcoreMessage',
     libraryTarget: 'umd',
   },
 });
@@ -21,7 +21,7 @@ const uglifiedConfig = Object.assign({}, commonJSConfig, {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'dashcore-message.min.js',
-    library: 'dashcore-message',
+    library: 'dashcoreMessage',
     libraryTarget: 'umd',
   },
   plugins: [
