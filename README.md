@@ -18,19 +18,19 @@ npm install @dashevo/dashcore-message
 To sign a message:
 
 ```javascript
-var bitcore = require('@dashevo/dashcore-lib');
-var Message = require('@dashevo/dashcore-message');
+const dashcore = require('@dashevo/dashcore-lib');
+const Message = require('@dashevo/dashcore-message');
 
-var privateKey = bitcore.PrivateKey.fromWIF('cPBn5A4ikZvBTQ8D7NnvHZYCAxzDZ5Z2TSGW2LkyPiLxqYaJPBW4');
-var signature = Message('hello, world').sign(privateKey);
+let privateKey = dashcore.PrivateKey.fromWIF('cPBn5A4ikZvBTQ8D7NnvHZYCAxzDZ5Z2TSGW2LkyPiLxqYaJPBW4');
+let signature = Message('hello, world').sign(privateKey);
 ```
 
 To verify a message:
 
 ```javascript
-var address = 'n1ZCYg9YXtB5XCZazLxSmPDa8iwJRZHhGx';
-var signature = 'H/DIn8uA1scAuKLlCx+/9LnAcJtwQQ0PmcPrJUq90aboLv3fH5fFvY+vmbfOSFEtGarznYli6ShPr9RXwY9UrIY=';
-var verified = Message('hello, world').verify(address, signature);
+let address = 'ygMh6pnu87cVEmc6hWcgq27PPMQf5LqTfF';
+let signature = 'Hzt8x84jddvWR7HrSqXnZ0Y7xobp0MvlOVBr+46D0OtjP55rGXwtsi8HVjRA+SGtj8EH8GEiwqyRzFJszowoW5w=';
+let verified = Message('hello, world').verify(address, signature);  // true
 ```
 
 ## Contributing
