@@ -5,9 +5,9 @@
 
 > Message Verification and Signing for dashcore-lib
 
-dashcore-message adds support for verifying and signing dash messages in [Node.js](http://nodejs.org/) and web browsers.
+dashcore-message is a JavaScript implementation of [message signing and verification](http://bitcoin.stackexchange.com/questions/3337/what-are-the-safety-guidelines-for-using-the-sign-message-feature/3339#3339) for Dash. This is used to cryptographically prove that a certain message was signed by the holder of an address private key.
 
-See [the main dashcore-lib repo](https://github.com/dashevo/dashcore-lib) for more information.
+This is also implemented internally in [the main dashcore-lib repo](https://github.com/dashevo/dashcore-lib).
 
 ## Install
 
