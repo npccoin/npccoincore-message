@@ -28,8 +28,8 @@ var signature = Message('hello, world').sign(privateKey);
 To verify a message:
 
 ```javascript
-var address = 'n1ZCYg9YXtB5XCZazLxSmPDa8iwJRZHhGx';
-var signature = 'H/DIn8uA1scAuKLlCx+/9LnAcJtwQQ0PmcPrJUq90aboLv3fH5fFvY+vmbfOSFEtGarznYli6ShPr9RXwY9UrIY=';
+var address = 'NVJqxtzaysARtRck61435JQ8VBeFCMWygi';
+var signature = 'IJ9KnzHzRtAPWrgS7YFA4PiOudJvzBhmjIF+kivXHenvBNlvY5tVwO0FM88wMCpzM3qT9fYaxiltLHjZGl/rzDc=';
 var verified = Message('hello, world').verify(address, signature);
 ```
 
