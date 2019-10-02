@@ -1,27 +1,27 @@
-# dashcore-message
+# npccoincore-message
 
-[![Build Status](https://img.shields.io/travis/dashevo/dashcore-message.svg?branch=master&style=flat-square)](https://travis-ci.org/dashevo/dashcore-message)
-[![NPM Package](https://img.shields.io/npm/v/@dashevo/dashcore-message.svg?style=flat-square)](https://www.npmjs.org/package/@dashevo/dashcore-message)
+[![Build Status](https://img.shields.io/travis/npccoin/npccoincore-message.svg?branch=master&style=flat-square)](https://travis-ci.org/npccoin/npccoincore-message)
+[![NPM Package](https://img.shields.io/npm/v/@npccoin/npccoincore-message.svg?style=flat-square)](https://www.npmjs.org/package/@npccoin/npccoincore-message)
 
-> Message Verification and Signing for dashcore-lib
+> Message Verification and Signing for npccoincore-lib
 
-dashcore-message adds support for verifying and signing dash messages in [Node.js](http://nodejs.org/) and web browsers.
+npccoincore-message adds support for verifying and signing npccoin messages in [Node.js](http://nodejs.org/) and web browsers.
 
-See [the main dashcore-lib repo](https://github.com/dashevo/dashcore-lib) for more information.
+See [the main npccoincore-lib repo](https://github.com/npccoin/npccoincore-lib) for more information.
 
 ## Install
 
 ```sh
-npm install @dashevo/dashcore-message
+npm install @npccoin/npccoincore-message
 ```
 
 To sign a message:
 
 ```javascript
-var bitcore = require('@dashevo/dashcore-lib');
-var Message = require('@dashevo/dashcore-message');
+var npccoincore = require('@npccoin/npccoincore-lib');
+var Message = require('@npccoin/npccoincore-message');
 
-var privateKey = bitcore.PrivateKey.fromWIF('cPBn5A4ikZvBTQ8D7NnvHZYCAxzDZ5Z2TSGW2LkyPiLxqYaJPBW4');
+var privateKey = npccoincore.PrivateKey.fromWIF('cPBn5A4ikZvBTQ8D7NnvHZYCAxzDZ5Z2TSGW2LkyPiLxqYaJPBW4');
 var signature = Message('hello, world').sign(privateKey);
 ```
 
@@ -35,9 +35,9 @@ var verified = Message('hello, world').verify(address, signature);
 
 ## Contributing
 
-Feel free to dive in! [Open an issue](https://github.com/dashevo/dashcore-message/issues/new) or submit PRs.
+Feel free to dive in! [Open an issue](https://github.com/npccoin/npccoincore-message/issues/new) or submit PRs.
 
-Please see [CONTRIBUTING.md](https://github.com/dashpay/dash/blob/master/CONTRIBUTING.md) on the DashCore repo for information about how to contribute.
+Please see [CONTRIBUTING.md](https://github.com/npccoin/npccoin/blob/master/CONTRIBUTING.md) on the NPCcoin Core repo for information about how to contribute.
 
 ## License
 

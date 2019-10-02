@@ -1,8 +1,8 @@
 {
-  "name": "@dashevo/dashcore-message",
+  "name": "@npccoin/npccoincore-message",
   "version": "2.0.0",
-  "description": "Message Verification and Signing for dashcore-lib",
-  "author": "Dash Core Group, Inc.",
+  "description": "Message Verification and Signing for npccoincore-lib",
+  "author": "NPCcoin Core Developers.",
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
@@ -16,17 +16,17 @@
     "prepublishOnly": "npm run build"
   },
   "keywords": [
-    "dash",
-    "dashcore-lib",
+    "npccoin",
+    "npccoincore-lib",
     "message",
     "signing"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/dashevo/dashcore-message.git"
+    "url": "https://github.com/npccoin/npccoincore-message.git"
   },
   "dependencies": {
-    "@dashevo/dashcore-lib": "^0.16.8"
+    "@npccoin/npccoincore-lib": "^0.16.8"
   },
   "devDependencies": {
     "chai": "~4.2.0",

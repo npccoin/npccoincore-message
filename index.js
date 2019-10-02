@@ -1,4 +1,4 @@
-const bitcore = require('@dashevo/dashcore-lib');
-bitcore.Message = require('./lib/message');
+const npccoincore = require('@npccoin/npccoincore-lib');
+npccoincore.Message = require('./lib/message');
 
-module.exports = bitcore.Message;
+module.exports = npccoincore.Message;

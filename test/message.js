@@ -1,17 +1,17 @@
 /* eslint-disable no-underscore-dangle */
-const bitcore = require('@dashevo/dashcore-lib');
+const npccoincore = require('@npccoin/npccoincore-lib');
 const chai = require('chai');
 const Message = require('../');
 
 const { expect } = chai;
 const should = chai.should();
-const { Address } = bitcore;
-const { Signature } = bitcore.crypto;
+const { Address } = npccoincore;
+const { Signature } = npccoincore.crypto;
 
 describe('Message', () => {
   const address = 'yZKdLYCvDXa2kyQr8Tg3N6c3xeZoK7XDcj';
   const badAddress = 'yj3v6A6gQkiRbChbGwvahiFZ6EfpYxk9na';
-  const privateKey = bitcore.PrivateKey.fromWIF('cR4qogdN9UxLZJXCNFNwDRRZNeLRWuds9TTSuLNweFVjiaE4gPaq');
+  const privateKey = npccoincore.PrivateKey.fromWIF('cR4qogdN9UxLZJXCNFNwDRRZNeLRWuds9TTSuLNweFVjiaE4gPaq');
   const text = 'hello, world';
   const signatureString = 'IB+LpNmaTAkB8e6fGgocGKuZ2tAXJ4ZmhhVs7FbOOcHjHPgMHycpAFIl1ojb+PA6jyhufeOKQZKjPnI8VQnevRI=';
 
@@ -97,7 +97,7 @@ describe('Message', () => {
   });
 
   it('will verify with an uncompressed pubkey', () => {
-    const otherPrivateKey = new bitcore.PrivateKey('67fd2209ce4a95f6f1d421ab3fbea47ada13df11b73b30c4d9a9f78cc80651ac');
+    const otherPrivateKey = new npccoincore.PrivateKey('67fd2209ce4a95f6f1d421ab3fbea47ada13df11b73b30c4d9a9f78cc80651ac');
     const message = new Message('This is an example of a signed message.');
     const otherSignature = message.sign(otherPrivateKey);
     const verified = message.verify(otherPrivateKey.toAddress(), otherSignature);

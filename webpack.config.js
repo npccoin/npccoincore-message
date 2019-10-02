@@ -12,16 +12,16 @@ const commonJSConfig = {
 const rawConfig = Object.assign({}, commonJSConfig, {
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'dashcore-message.js',
-    library: 'dashcore-message',
+    filename: 'npccoincore-message.js',
+    library: 'npccoincore-message',
     libraryTarget: 'umd',
   },
 });
 const uglifiedConfig = Object.assign({}, commonJSConfig, {
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'dashcore-message.min.js',
-    library: 'dashcore-message',
+    filename: 'npccoincore-message.min.js',
+    library: 'npccoincore-message',
     libraryTarget: 'umd',
   },
   plugins: [
